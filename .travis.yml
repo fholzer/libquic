@@ -6,8 +6,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install --only-upgrade cmake
 
-install:
+script:
   - mkdir build
   - cd build && cmake .. && make -j$(nproc --all)
-
-script:
+  
