@@ -1,0 +1,12 @@
+language: cpp
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install --only-upgrade cmake
+
+script:
+  - mkdir build
+  - cd build && cmake .. && make -j$(nproc --all)
+  
