@@ -6,4 +6,4 @@ before_install:
 
 install:
   - mkdir build
-  - cd build & cmake .. && make -j$(nproc --all) && make VERBOSE=1 install
+  - cd build && cmake .. && make -j$(nproc --all) && make VERBOSE=1 install
