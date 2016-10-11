@@ -1,0 +1,12 @@
+language: cpp
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python
+
+install:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j$(nproc --all)
+  - make VERBOSE=1 install
