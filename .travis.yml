@@ -9,3 +9,5 @@ before_install:
 install:
   - mkdir build
   - cd build && cmake .. && make -j$(nproc --all)
+
+script:
